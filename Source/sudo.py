@@ -14,26 +14,44 @@ if len(sys.argv) < 2:
     input()
     sys.exit()
 
-if len(sys.argv) <= 2:
+if len(sys.argv) >= 3:
+    script_name, parameter, command = sys.argv
+    
+    if (parameter) == "-i":
+        tuple_strings_exec()
+        sys.exit()
+    if (parameter) == "--login":
+        tuple_strings_exec()
+        sys.exit()
+    if (parameter) == "-n":
+        os.system(command)  
+        sys.exit()
+    if (parameter) == "--normal":
+        os.system(command)
+        sys.exit()
+
+else:
     script_name, parameter = sys.argv
     
     if (parameter) == "-i":
         os.system('C:\sudo\cmd.lnk')
-    
+        sys.exit()
     if (parameter) == "--login":
         os.system('C:\sudo\cmd.lnk')
-    
+        sys.exit()
+    if (parameter) == "-n":
+        os.system('cmd.exe')
+        sys.exit()
+    if (parameter) == "--normal":
+        os.system('cmd.exe')
+        sys.exit()
     if (parameter) == "--matrix":
         os.system('C:\sudo\system.lnk')
+        sys.exit()
     
     if (parameter) == "--parrot":
         os.system('C:\sudo\system2.lnk')
-    
-    if (parameter) == "-n":
-        os.system('cmd.exe')
-    
-    if (parameter) == "--normal":
-        os.system('cmd.exe')
+        sys.exit()
     
     if (parameter) == "--help":
         print("Usage: sudo [options...] <command>")
@@ -44,6 +62,7 @@ if len(sys.argv) <= 2:
         print(" ")
         print("Press 'Enter' to quit")
         input()
+        sys.exit()
 
 
     if (parameter) == "--help-all":
@@ -57,18 +76,11 @@ if len(sys.argv) <= 2:
         print(" ")
         print("Press 'Enter' to quit")
         input()
+        sys.exit()
         
-        
-
-else:
-    script_name, parameter, command = sys.argv
-    
-    if (parameter) == "-i":
-        tuple_strings_exec()
-    if (parameter) == "--login":
-        tuple_strings_exec()
-    if (parameter) == "-n":
-        os.system(command)  
-    if (parameter) == "--normal":
+    else:
+        script_name, command = sys.argv
         os.system(command)
+        sys.exit()
+
 
