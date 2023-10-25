@@ -5,7 +5,7 @@
 # Changelog:
 
 
-### V.1.0: added the ability to run programs without specifying execution permissions (default choice: standard administrator permissions)
+### V.1.1: added the ability to run programs without specifying execution permissions (default choice: standard administrator permissions)
 
 
 ### V.1.0: the first version of the program
