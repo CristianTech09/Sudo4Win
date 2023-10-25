@@ -1,2 +1,2 @@
 # Sudo4Win
-è un piccolo tool da riga di comando Basato su NSudo per poter eseguire programmi con i massimi permessi amministrativi come si fa nei sistemi UNIX Like
+is a small command line tool based on NSudo to be able to execute programs with maximum administrative permissions as is done in UNIX systems Like
